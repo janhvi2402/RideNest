@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RideNest — Rent Your Perfect Ride in Minutes</title>
+<meta name="description" content="RideNest — premium car, bike and EV rentals with instant booking, transparent pricing and zero hidden charges.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+     <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-rn" id="mainNav">
+  <div class="container">
+    <a class="rn-logo" href="#home">Ride<span class="dot">Nest</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="bi bi-list fs-1"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-0 gap-2 py-3 py-lg-0">
+        <li class="nav-item"><a class="rn-nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="rn-nav-link" href="#vehicles">Vehicles</a></li>
+        <li class="nav-item"><a class="rn-nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="rn-nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="rn-nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="rn-nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="#booking" class="btn btn-mocha btn-sm-pill">Book Now</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ==========================================================================
+     HERO
+     ========================================================================== -->
+<section class="hero" id="home">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="hero-eyebrow reveal in"><span class="pulse"></span> Instant booking · 40+ cities</div>
+        <h1 class="reveal in">Rent Your Perfect <em>Ride</em> in Minutes</h1>
+        <p class="lead reveal in reveal-delay-1">Choose from premium cars, bikes and EVs with instant booking, transparent pricing and zero hidden charges.</p>
+        <div class="d-flex flex-wrap gap-3 reveal in reveal-delay-2">
+          <a href="#booking" class="btn btn-mocha">Find Your Ride <i class="bi bi-arrow-up-right ms-1"></i></a>
+          <a href="#vehicles" class="btn btn-outline-charcoal">Browse Fleet</a>
+        </div>
+        <div class="hero-stats-inline reveal in reveal-delay-3">
+          <div><strong>4.9<i class="bi bi-star-fill text-sage" style="font-size:1rem;"></i></strong><span>App rating</span></div>
+          <div><strong>50k+</strong><span>Happy riders</span></div>
+          <div><strong>07 min</strong><span>Avg. pickup</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-media reveal in reveal-delay-2">
+          <img src="assets/photo-1519641471654-76ce0107ad1b.avif" alt="Premium RideNest SUV">
+          <div class="hero-media-badge"><i class="bi bi-lightning-charge-fill text-sage"></i> Electric Available</div>
+          <div class="hero-media-caption">
+            <div class="model">Range Rover Velar</div>
+            <div class="sub">Full-size Luxury SUV</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating booking card -->
+    <div class="booking-card reveal in reveal-delay-3" id="booking">
+      <div class="row g-3 align-items-end">
+        <div class="col-lg-3 col-md-6 booking-field">
+          <label><i class="bi bi-geo-alt-fill"></i> Pickup Location</label>
+          <select class="form-select">
+            <option>Bengaluru, KA</option>
+            <option>Mumbai, MH</option>
+            <option>Delhi NCR</option>
+            <option>Goa</option>
+            <option>Hyderabad, TS</option>
+          </select>
+        </div>
+        <div class="col-lg-2 col-md-6 booking-field">
+          <label><i class="bi bi-calendar-check"></i> Pickup Date</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-lg-2 col-md-6 booking-field">
+          <label><i class="bi bi-calendar-x"></i> Return Date</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-lg-3 col-md-6 booking-field">
+          <label><i class="bi bi-car-front-fill"></i> Vehicle Type</label>
+          <select class="form-select">
+            <option>Any Vehicle</option>
+            <option>SUV</option>
+            <option>Sedan</option>
+            <option>Sports Bike</option>
+            <option>Luxury Car</option>
+            <option>Electric Scooter</option>
+          </select>
+        </div>
+        <div class="col-lg-2 col-md-6 booking-field">
+          <button class="booking-search-btn" id="searchBtn"><i class="bi bi-search"></i> Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 
+     STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-4 stat-item reveal">
+        <div class="stat-number"><span class="counter" data-target="50000">0</span>+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="col-md-4 stat-item reveal reveal-delay-1">
+        <div class="stat-number"><span class="counter" data-target="200">0</span>+</div>
+        <div class="stat-label">Premium Vehicles</div>
+      </div>
+      <div class="col-md-4 stat-item reveal reveal-delay-2">
+        <div class="stat-number"><span class="counter" data-target="40">0</span>+</div>
+        <div class="stat-label">Cities Covered</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FEATURED VEHICLES
+     ========================================================================== -->
+<section class="section-pad bg-ivory" id="vehicles">
+  <div class="container">
+    <div class="row align-items-end mb-5">
+      <div class="col-lg-7 reveal">
+        <div class="eyebrow">The Fleet</div>
+        <h2 class="section-heading">Featured Vehicles</h2>
+        <p class="section-sub">A curated line-up of SUVs, sedans, bikes and EVs — each one inspected, detailed and ready in minutes.</p>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-lg-end mt-4 mt-lg-0 reveal">
+        <div class="vehicle-filter-pills" id="filterPills">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="suv">SUV</button>
+          <button class="filter-pill" data-filter="sedan">Sedan</button>
+          <button class="filter-pill" data-filter="bike">Bikes</button>
+          <button class="filter-pill" data-filter="ev">EV</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4" id="vehicleGrid">
+      <!-- SUV -->
+      <div class="col-lg-4 col-md-6 vehicle-item reveal" data-cat="suv">
+        <div class="vehicle-card">
+          <div class="vehicle-media">
+            <img src="assets/photo-1533473359331-0135ef1b58bf.avif" alt="Premium SUV">
+            <span class="vehicle-tag">SUV</span>
+            <span class="vehicle-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+          </div>
+          <div class="vehicle-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5>Terrain Voyager</h5>
+              <div class="vehicle-price">₹4,200<small> /day</small></div>
+            </div>
+            <div class="vehicle-feats">
+              <span><i class="bi bi-people-fill"></i> 5 Seats</span>
+              <span><i class="bi bi-gear-fill"></i> Auto</span>
+              <span><i class="bi bi-fuel-pump-fill"></i> Diesel</span>
+            </div>
+            <button class="btn-book">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Sedan -->
+      <div class="col-lg-4 col-md-6 vehicle-item reveal reveal-delay-1" data-cat="sedan">
+        <div class="vehicle-card">
+          <div class="vehicle-media">
+            <img src="assets/photo-1616361986889-3a182ffc7a23.avif" alt="Luxury Sedan">
+            <span class="vehicle-tag">Sedan</span>
+            <span class="vehicle-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+          </div>
+          <div class="vehicle-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5>Aurum Sedan</h5>
+              <div class="vehicle-price">₹3,100<small> /day</small></div>
+            </div>
+            <div class="vehicle-feats">
+              <span><i class="bi bi-people-fill"></i> 4 Seats</span>
+              <span><i class="bi bi-gear-fill"></i> Auto</span>
+              <span><i class="bi bi-fuel-pump-fill"></i> Petrol</span>
+            </div>
+            <button class="btn-book">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Sports Bike -->
+      <div class="col-lg-4 col-md-6 vehicle-item reveal reveal-delay-2" data-cat="bike">
+        <div class="vehicle-card">
+          <div class="vehicle-media">
+            <img src="assets/photo-1568772585407-9361f9bf3a87.avif" alt="Sports Bike">
+            <span class="vehicle-tag">Sports Bike</span>
+            <span class="vehicle-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+          </div>
+          <div class="vehicle-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5>Falcon RR</h5>
+              <div class="vehicle-price">₹1,400<small> /day</small></div>
+            </div>
+            <div class="vehicle-feats">
+              <span><i class="bi bi-speedometer2"></i> 999cc</span>
+              <span><i class="bi bi-gear-fill"></i> Manual</span>
+              <span><i class="bi bi-fuel-pump-fill"></i> Petrol</span>
+            </div>
+            <button class="btn-book">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Luxury Car -->
+      <div class="col-lg-4 col-md-6 vehicle-item reveal" data-cat="sedan">
+        <div class="vehicle-card">
+          <div class="vehicle-media">
+            <img src="assets/photo-1607730730126-2b1604bd470e.avif" alt="Luxury Car">
+            <span class="vehicle-tag">Luxury</span>
+            <span class="vehicle-rating"><i class="bi bi-star-fill"></i> 5.0</span>
+          </div>
+          <div class="vehicle-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5>Onyx Grand</h5>
+              <div class="vehicle-price">₹8,900<small> /day</small></div>
+            </div>
+            <div class="vehicle-feats">
+              <span><i class="bi bi-people-fill"></i> 4 Seats</span>
+              <span><i class="bi bi-gear-fill"></i> Auto</span>
+              <span><i class="bi bi-cup-hot-fill"></i> Chauffeur</span>
+            </div>
+            <button class="btn-book">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Electric Scooter -->
+      <div class="col-lg-4 col-md-6 vehicle-item reveal reveal-delay-1" data-cat="ev">
+        <div class="vehicle-card">
+          <div class="vehicle-media">
+            <img src="assets/photo-1558981806-ec527fa84c39.avif" alt="Electric Scooter">
+            <span class="vehicle-tag">Electric</span>
+            <span class="vehicle-rating"><i class="bi bi-star-fill"></i> 4.7</span>
+          </div>
+          <div class="vehicle-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5>Volt Glide</h5>
+              <div class="vehicle-price">₹600<small> /day</small></div>
+            </div>
+            <div class="vehicle-feats">
+              <span><i class="bi bi-battery-charging"></i> 90km</span>
+              <span><i class="bi bi-gear-fill"></i> Auto</span>
+              <span><i class="bi bi-leaf-fill"></i> Zero Emission</span>
+            </div>
+            <button class="btn-book">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- EV Car -->
+      <div class="col-lg-4 col-md-6 vehicle-item reveal reveal-delay-2" data-cat="ev">
+        <div class="vehicle-card">
+          <div class="vehicle-media">
+            <img src="assets/photo-1620891549027-942fdc95d3f5.avif" alt="Electric Vehicle">
+            <span class="vehicle-tag">EV</span>
+            <span class="vehicle-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+          </div>
+          <div class="vehicle-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5>Nova Electric</h5>
+              <div class="vehicle-price">₹5,500<small> /day</small></div>
+            </div>
+            <div class="vehicle-feats">
+              <span><i class="bi bi-battery-charging"></i> 450km</span>
+              <span><i class="bi bi-gear-fill"></i> Auto</span>
+              <span><i class="bi bi-lightning-charge-fill"></i> Fast Charge</span>
+            </div>
+            <button class="btn-book">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     WHY CHOOSE RIDENEST
+     ========================================================================== -->
+<section class="section-pad" style="background:var(--beige);">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 reveal" style="max-width:600px;">
+      <div class="eyebrow justify-content-center">The RideNest Standard</div>
+      <h2 class="section-heading">Why Choose RideNest</h2>
+      <p class="section-sub mx-auto">Every detail engineered so renting a vehicle feels as premium as owning one.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6 reveal">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h5>Instant Booking</h5>
+          <p>Reserve any vehicle in under two minutes with real-time availability and instant confirmation.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 reveal reveal-delay-1">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-tags-fill"></i></div>
+          <h5>Affordable Pricing</h5>
+          <p>Transparent, all-inclusive rates with zero hidden charges — what you see is what you pay.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 reveal reveal-delay-2">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <h5>GPS Tracking</h5>
+          <p>Every vehicle is fitted with live GPS for safety, navigation and peace of mind on every trip.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 reveal reveal-delay-3">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-headset"></i></div>
+          <h5>24/7 Support</h5>
+          <p>Round-the-clock concierge support ready to help — on the road or before you book.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     HOW IT WORKS
+     ========================================================================== -->
+<section class="section-pad bg-ivory">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 reveal" style="max-width:600px;">
+      <div class="eyebrow justify-content-center">Simple Process</div>
+      <h2 class="section-heading">How It Works</h2>
+      <p class="section-sub mx-auto">From search to steering wheel in four effortless steps.</p>
+    </div>
+    <div class="timeline-wrap">
+      <div class="timeline-line d-none d-md-block"></div>
+      <div class="row g-5">
+        <div class="col-md-3 timeline-step reveal">
+          <span class="step-tag">Step 01</span>
+          <div class="timeline-num"><i class="bi bi-search"></i></div>
+          <h5>Search</h5>
+          <p>Tell us your location and dates — we'll surface the best available rides nearby.</p>
+        </div>
+        <div class="col-md-3 timeline-step reveal reveal-delay-1">
+          <span class="step-tag">Step 02</span>
+          <div class="timeline-num"><i class="bi bi-ui-checks"></i></div>
+          <h5>Choose</h5>
+          <p>Compare SUVs, sedans, bikes and EVs by price, rating and features.</p>
+        </div>
+        <div class="col-md-3 timeline-step reveal reveal-delay-2">
+          <span class="step-tag">Step 03</span>
+          <div class="timeline-num"><i class="bi bi-patch-check-fill"></i></div>
+          <h5>Verify</h5>
+          <p>Quick, secure ID verification and digital signature — no paperwork.</p>
+        </div>
+        <div class="col-md-3 timeline-step reveal reveal-delay-3">
+          <span class="step-tag">Step 04</span>
+          <div class="timeline-num"><i class="bi bi-key-fill"></i></div>
+          <h5>Drive</h5>
+          <p>Pick up your keys — or let us deliver — and hit the road in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     PRICING
+     ========================================================================== -->
+<section class="section-pad" style="background:var(--beige);" id="pricing">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 reveal" style="max-width:600px;">
+      <div class="eyebrow justify-content-center">Plans</div>
+      <h2 class="section-heading">Simple, Transparent Pricing</h2>
+      <p class="section-sub mx-auto">Pick a plan that matches your journey — upgrade, downgrade or cancel anytime.</p>
+    </div>
+    <div class="row g-4 justify-content-center align-items-center">
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="price-card">
+          <div class="price-plan-name">Weekend</div>
+          <div class="price-plan-sub">For short getaways</div>
+          <div class="price-amount">₹2,499<span>/2 days</span></div>
+          <ul class="price-feat">
+            <li><i class="bi bi-check-circle-fill"></i> 200km included</li>
+            <li><i class="bi bi-check-circle-fill"></i> Basic insurance</li>
+            <li><i class="bi bi-check-circle-fill"></i> Standard vehicles</li>
+            <li><i class="bi bi-check-circle-fill"></i> Email support</li>
+          </ul>
+          <a href="#booking" class="btn btn-outline-charcoal w-100">Choose Plan</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="price-card featured">
+          <span class="price-badge">Most Popular</span>
+          <div class="price-plan-name">Explorer</div>
+          <div class="price-plan-sub">For weekly adventures</div>
+          <div class="price-amount">₹8,999<span>/week</span></div>
+          <ul class="price-feat">
+            <li><i class="bi bi-check-circle-fill"></i> Unlimited kilometers</li>
+            <li><i class="bi bi-check-circle-fill"></i> Full insurance cover</li>
+            <li><i class="bi bi-check-circle-fill"></i> Premium fleet access</li>
+            <li><i class="bi bi-check-circle-fill"></i> Priority 24/7 support</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free doorstep delivery</li>
+          </ul>
+          <a href="#booking" class="btn btn-sage w-100">Choose Plan</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="price-card">
+          <div class="price-plan-name">Luxury</div>
+          <div class="price-plan-sub">For premium experiences</div>
+          <div class="price-amount">₹19,999<span>/week</span></div>
+          <ul class="price-feat">
+            <li><i class="bi bi-check-circle-fill"></i> Unlimited kilometers</li>
+            <li><i class="bi bi-check-circle-fill"></i> Zero-deductible insurance</li>
+            <li><i class="bi bi-check-circle-fill"></i> Luxury & sports fleet</li>
+            <li><i class="bi bi-check-circle-fill"></i> Dedicated concierge</li>
+            <li><i class="bi bi-check-circle-fill"></i> Optional chauffeur</li>
+          </ul>
+          <a href="#booking" class="btn btn-outline-charcoal w-100">Choose Plan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     TESTIMONIALS
+     ========================================================================== -->
+<section class="section-pad testimonial-section" id="reviews">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 reveal" style="max-width:600px;">
+      <div class="eyebrow justify-content-center">Testimonials</div>
+      <h2 class="section-heading">Loved by Riders Everywhere</h2>
+    </div>
+
+    <div id="testimonialCarousel" class="carousel slide reveal" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testimonial-quote">"RideNest made renting a car feel effortless. The SUV was spotless, the app is gorgeous, and pickup took less than five minutes."</p>
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="Ananya Rao">
+            <div class="testimonial-name">Ananya Rao</div>
+            <div class="testimonial-role">Product Designer, Bengaluru</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testimonial-quote">"Transparent pricing, no surprise fees, and the GPS tracking gave my family real peace of mind on our road trip."</p>
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Karan Mehta">
+            <div class="testimonial-name">Karan Mehta</div>
+            <div class="testimonial-role">Founder, Pune</div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="testimonial-quote">"The Explorer plan is perfect for my weekly client visits. Premium cars, unlimited kilometers, and support that actually responds fast."</p>
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Priya Nair">
+            <div class="testimonial-name">Priya Nair</div>
+            <div class="testimonial-role">Sales Manager, Mumbai</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     APP SHOWCASE
+     ========================================================================== -->
+<section class="section-pad app-section bg-ivory">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 order-2 order-lg-1 reveal">
+        <div class="eyebrow">Mobile Experience</div>
+        <h2 class="section-heading">Your Garage, In Your Pocket</h2>
+        <p class="section-sub mb-4">Book, unlock and track your ride — the entire RideNest fleet lives in one beautifully simple app.</p>
+        <ul class="list-unstyled mb-4">
+          <li class="mb-3 d-flex gap-3"><i class="bi bi-check-circle-fill text-sage fs-5"></i> <span>Digital key — unlock your vehicle from your phone</span></li>
+          <li class="mb-3 d-flex gap-3"><i class="bi bi-check-circle-fill text-sage fs-5"></i> <span>Live trip tracking and trip history</span></li>
+          <li class="mb-3 d-flex gap-3"><i class="bi bi-check-circle-fill text-sage fs-5"></i> <span>In-app support chat, 24/7</span></li>
+        </ul>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#" class="app-store-btn"><i class="bi bi-apple"></i><span class="lbl"><small>Download on the</small><strong>App Store</strong></span></a>
+          <a href="#" class="app-store-btn"><i class="bi bi-google-play"></i><span class="lbl"><small>Get it on</small><strong>Google Play</strong></span></a>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 position-relative reveal reveal-delay-1">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-ui">
+              <div class="app-card">
+                <small>CURRENT TRIP</small>
+                <h6>Range Rover Velar</h6>
+                <small>12 km · 18 min remaining</small>
+              </div>
+              <div class="app-card">
+                <small>NEARBY</small>
+                <h6>Volt Glide — EV Scooter</h6>
+                <small>0.4 km away · ₹600/day</small>
+              </div>
+              <div class="app-card">
+                <small>UPCOMING</small>
+                <h6>Aurum Sedan</h6>
+                <small>Tomorrow, 9:00 AM</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-floating-badge" style="top:10%; left:-6%;"><i class="bi bi-shield-check text-sage fs-5"></i> Verified Driver</div>
+        <div class="app-floating-badge" style="bottom:14%; right:-6%;"><i class="bi bi-battery-charging text-sage fs-5"></i> 92% Charged</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FAQ
+     ========================================================================== -->
+<section class="section-pad faq-section" style="background:var(--beige);" id="faq">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 mb-5 mb-lg-0 reveal">
+        <div class="eyebrow">Questions</div>
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+        <p class="section-sub">Can't find the answer you're looking for? Reach our support team anytime.</p>
+        <a href="#contact" class="btn btn-mocha mt-2">Contact Support</a>
+      </div>
+      <div class="col-lg-7 reveal reveal-delay-1">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What documents do I need to rent a vehicle?</button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">A valid driving license, a government-issued ID and a refundable security deposit. Everything is verified digitally within the app.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Is insurance included in the price?</button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes, every booking includes basic insurance coverage. Explorer and Luxury plans include full and zero-deductible coverage respectively.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Can I cancel or reschedule my booking?</button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Absolutely — free cancellations up to 24 hours before pickup, and rescheduling is available anytime from the app.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Do you offer doorstep delivery?</button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes, doorstep delivery and pickup is free with the Explorer and Luxury plans, and available at a small fee otherwise.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">What cities does RideNest operate in?</button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">RideNest is live in 40+ cities across India, with new locations added every month. Check the app for availability near you.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     NEWSLETTER
+     ========================================================================== -->
+<section class="section-pad bg-ivory">
+  <div class="container">
+    <div class="newsletter-card reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h3 class="font-display mb-2" style="font-size:1.8rem;">Get exclusive offers in your inbox</h3>
+          <p class="mb-0" style="color:rgba(248,246,242,0.7);">Subscribe for early access to new vehicles, seasonal discounts and travel guides.</p>
+        </div>
+        <div class="col-lg-6">
+          <form class="newsletter-input-group" id="newsletterForm">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <div id="newsletterMsg" class="mt-2 small" style="color:var(--sand);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FOOTER
+     ========================================================================== -->
+<footer class="footer-rn" id="contact">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="rn-logo" href="#home" style="color:var(--ivory);">Ride<span class="dot">Nest</span></a>
+        <p class="mt-3" style="max-width:320px; font-size:0.9rem; color:rgba(248,246,242,0.6);">Premium vehicle rentals — cars, bikes and EVs — with instant booking and zero hidden charges, in 40+ cities.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Quick Links</h6>
+        <a href="#home">Home</a>
+        <a href="#vehicles">Vehicles</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Company</h6>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Support</h6>
+        <a href="#faq">FAQ</a>
+        <a href="#">Help Center</a>
+        <a href="#">Safety</a>
+        <a href="#">Terms</a>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Contact</h6>
+        <a href="mailto:hello@ridenest.com">hello@ridenest.com</a>
+        <a href="tel:+911234567890">+91 12345 67890</a>
+        <a href="#">Bengaluru, India</a>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>© 2026 RideNest. All rights reserved.</span>
+      <span>Crafted with care for the open road.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js">
+</script>
+</body>
+</html>
